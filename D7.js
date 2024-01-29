@@ -281,9 +281,22 @@ console.log(numeroFilmConForEach);
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
 
+function obtainMovieTitles(arrayFilm) {
+  const moviesTitles = arrayFilm.map(function(film) {
+    return film.Title;
+  });
+
+  return moviesTitles;
+}
+  const titoliFilm = obtainMovieTitles(movies);
+  console.log(titoliFilm);
+
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
+
+function obtainCurrentCenturyMovie(arrayMovie) {
+  const currentYear = new Date().getFullYear();
 
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
